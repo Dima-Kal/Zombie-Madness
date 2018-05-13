@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Ammo.png</Source>
+      <Name>Ammo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Ammo.xnb</Output>
+      <Time>2011-05-18T23:23:07.431+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Bar.png</Source>
+      <Name>Bar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Bar.xnb</Output>
+      <Time>2011-05-18T23:23:07.436+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Blank.bmp</Source>
+      <Name>Blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Blank.xnb</Output>
+      <Time>2011-05-18T23:23:07.44+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Bullet.png</Source>
+      <Name>Bullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Bullet.xnb</Output>
+      <Time>2011-05-18T23:23:07.445+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Character\SoldierBlue.PNG</Source>
+      <Name>Character\SoldierBlue</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Character\SoldierBlue.xnb</Output>
+      <Time>2011-05-18T23:23:07.474+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Character\SoldierDefault.PNG</Source>
+      <Name>Character\SoldierDefault</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Character\SoldierDefault.xnb</Output>
+      <Time>2011-05-18T23:23:07.48+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Character\SoldierRed.PNG</Source>
+      <Name>Character\SoldierRed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Character\SoldierRed.xnb</Output>
+      <Time>2011-05-18T23:23:07.486+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Character\Zombie.PNG</Source>
+      <Name>Character\Zombie</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Character\Zombie.xnb</Output>
+      <Time>2011-05-18T23:23:07.491+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Character\ZombieBody.png</Source>
+      <Name>Character\ZombieBody</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Character\ZombieBody.xnb</Output>
+      <Time>2011-05-18T23:23:07.494+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Circle.png</Source>
+      <Name>Circle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Circle.xnb</Output>
+      <Time>2011-05-18T23:23:07.449+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Crosshair.png</Source>
+      <Name>Crosshair</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Crosshair.xnb</Output>
+      <Time>2011-05-18T23:23:07.454+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Map\Asphalt.png</Source>
+      <Name>Map\Asphalt</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Map\Asphalt.xnb</Output>
+      <Time>2011-05-18T23:23:07.407+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Map\Grass.png</Source>
+      <Name>Map\Grass</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Map\Grass.xnb</Output>
+      <Time>2011-05-18T23:23:07.414+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Map\Grass2.PNG</Source>
+      <Name>Map\Grass2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Map\Grass2.xnb</Output>
+      <Time>2011-05-18T23:23:07.418+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Map\Wall.png</Source>
+      <Name>Map\Wall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Map\Wall.xnb</Output>
+      <Time>2011-05-18T23:23:07.426+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\GunReload.wav</Source>
+      <Name>Audio\GunReload</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Audio\GunReload.xnb</Output>
+      <Time>2011-05-18T23:23:07.457+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\GunShot.wav</Source>
+      <Name>Audio\GunShot</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Audio\GunShot.xnb</Output>
+      <Time>2011-05-18T23:23:07.458+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\Zombie.wav</Source>
+      <Name>Audio\Zombie</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Audio\Zombie.xnb</Output>
+      <Time>2011-05-18T23:23:07.47+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\MenuMusic.mp3</Source>
+      <Name>Audio\MenuMusic</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Audio\MenuMusic.xnb</Output>
+      <Extra>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\Audio\MenuMusic.wma</Extra>
+      <Time>2011-05-18T23:23:07.467+03:00</Time>
+    </Item>
+    <Item>
+      <Source>MyFont.spritefont</Source>
+      <Name>MyFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\MyFont.xnb</Output>
+      <Time>2011-05-18T23:34:46.444+03:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Dima\Documents\Visual Studio 2008\ZombieMadness\ZMMP\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2009-05-28T00:16:14+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2009-05-28T00:16:06+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2009-05-28T00:16:16+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2009-05-28T00:16:26+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2009-05-28T00:16:12+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2009-05-28T00:16:06+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\3.1.0.0__6d5c3888ef60e27d\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2011-04-14T15:06:54.0796+03:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
