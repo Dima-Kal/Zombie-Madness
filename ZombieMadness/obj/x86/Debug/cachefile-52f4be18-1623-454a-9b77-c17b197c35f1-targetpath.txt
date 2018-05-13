@@ -1,0 +1,7 @@
+Content\about.xnb
+Content\background.xnb
+Content\howtoplay.xnb
+Content\MenuMusic.xnb
+Content\MenuMusic.wma
+Content\SpriteFont1.xnb
+Content\SpriteFont2.xnb

@@ -1,0 +1,908 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lidgren.Library.Network</name>
+    </assembly>
+    <members>
+        <member name="T:Lidgren.Library.Network.NetStatistics">
+            <summary>
+            Statistics for a connection
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetStatistics.Reset">
+            <summary>
+            Reset statistics counters
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetStatistics.DumpToLog(Lidgren.Library.Network.NetLog)">
+            <summary>
+            Dump all statistics to log
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetConstants.DefaultServerName">
+            <summary>
+            Default server name if none is set in NetAppConfiguration
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetConstants.EarlyArrivalWindowSize">
+            <summary>
+            Maximum sequence difference for messages to be classified as Early
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetServerInfo">
+            <summary>
+            Information about a running server
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetServerInfo.RemoteEndpoint">
+            <summary>
+            Remote endpoint of the server
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetServerInfo.ServerName">
+            <summary>
+            Name of the server
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetServerInfo.NumConnected">
+            <summary>
+            Number of clients connected (or connecting) to the server
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetServerInfo.MaxConnections">
+            <summary>
+            Maximum number of connections allowed for the server
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetDiscovery">
+            <summary>
+            Discovery of local servers
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.CommonBandwidths">
+            <summary>
+            Bytes/Second for a few common bandwidths
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetConnectionConfiguration">
+            <summary>
+            Configuration for a certain connection
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetAppConfiguration">
+            <summary>
+            Configuration for a networked app
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetAppConfiguration.StringEncoding">
+            <summary>
+            Encoding used by NetMessage.Write(string)
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetAppConfiguration.MaximumTransmissionUnit">
+            <summary>
+            Maximum number of bytes to send in a single packet
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetAppConfiguration.DefaultNetMessageBufferSize">
+            <summary>
+            How many bytes to allocate in new NetMessages by default
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetAppConfiguration.ServerName">
+            <summary>
+            Server name reported by local server discovery
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetAppConfiguration.#ctor(System.String,System.Int32)">
+            <summary>
+            Application-wide network configuration
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetAppConfiguration.#ctor(System.String)">
+            <summary>
+            Application-wide network configuration
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetAppConfiguration.SendBufferSize">
+            <summary>
+            Size of the send buffer; default 65536
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetAppConfiguration.ReceiveBufferSize">
+            <summary>
+            Size of the receive buffer; default 65536
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetAppConfiguration.ApplicationIdentifier">
+            <summary>
+            Identifier for this application; differentiating it from other Lidgren.Library.Network apps
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetAppConfiguration.Port">
+            <summary>
+            Local port to bind to
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetAppConfiguration.MaximumConnections">
+            <summary>
+            Server only: Maximum number of connections allowed
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetAppConfiguration.UsesEncryption">
+            <summary>
+            Gets whether encryption is used or not
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetRandom">
+            <summary>
+            A fast random number generator for .NET by Colin Green, January 2005
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.#ctor">
+            <summary>
+            Initialises a new instance using time dependent seed.
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.#ctor(System.Int32)">
+            <summary>
+            Initialises a new instance using an int value as seed.
+            This constructor signature is provided to maintain compatibility with
+            System.Random
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.Reinitialize(System.Int32)">
+            <summary>
+            Reinitializes using an int value as a seed.
+            </summary>
+            <param name="seed"></param>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.NextUInt">
+            <summary>
+            Generates a uint. Values returned are over the full range of a uint, 
+            uint.MinValue to uint.MaxValue, including the min and max values.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.Next">
+            <summary>
+            Generates a random int. Values returned are over the range 0 to int.MaxValue-1.
+            MaxValue is not generated to remain functionally equivalent to System.Random.Next().
+            If you require an int from the full range, including negative values then call
+            NextUint() and cast the value to an int.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.Next(System.Int32)">
+            <summary>
+            Generates a random int over the range 0 to upperBound-1, and not including upperBound.
+            </summary>
+            <param name="upperBound"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.Next(System.Int32,System.Int32)">
+            <summary>
+            Generates a random int over the range lowerBound to upperBound-1, and not including upperBound.
+            upperBound must be >= lowerBound. lowerBound may be negative.
+            </summary>
+            <param name="lowerBound"></param>
+            <param name="upperBound"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.NextDouble">
+            <summary>
+            Generates a random double. Values returned are from 0.0 up to but not including 1.0.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.NextFloat">
+            <summary>
+            Generates a random double. Values returned are from 0.0 up to but not including 1.0.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.NextFloat(System.Single)">
+            <summary>
+            Generates a random double. Values returned are from 0.0 up to but not including roof
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.NextFloat(System.Single,System.Single)">
+            <summary>
+            Generates a random double. Values returned are from min up to but not including min + variance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.Chance(System.Single)">
+            <summary>
+            If passed 0.7f it will return true 7 times out of 10
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.NextBytes(System.Byte[])">
+            <summary>
+            Fills the provided byte array with random bytes.
+            Increased performance is achieved by dividing and packaging bits directly from the
+            random number generator and storing them in 4 byte 'chunks'.
+            </summary>
+            <param name="buffer"></param>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetRandom.NextBool">
+            <summary>
+            Generates random bool. 
+            Increased performance is achieved by buffering 32 random bits for 
+            future calls. Thus the random number generator is only invoked once
+            in every 32 calls.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lidgren.Library.Network.BitWriter.ReadByte(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Read 1-8 bits from a buffer into a byte
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.BitWriter.ReadUInt32(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Read 1-32 bits from a buffer into an unsigned integer
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.BitWriter.ReadUInt64(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Read 1-64 bits from a buffer into an unsigned long
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.BitWriter.ReadBytes(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            Read several bytes from a buffer
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.BitWriter.WriteByte(System.Byte,System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            Write a byte consisting of 1-8 bits to a buffer; assumes buffer is previously allocated
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.BitWriter.WriteUInt32(System.UInt32,System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            Write an unsigned integer consisting of 1-32 bits to a buffer; assumes buffer is previously allocated
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.BitWriter.WriteUInt64(System.UInt64,System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            Write an unsigned long consisting of 1-64 bits to a buffer; assumes buffer is previously allocated
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.BitWriter.WriteBytes(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            Write several whole bytes
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetBuffer.Write7BitEncodedUInt(System.UInt32)">
+            <summary>
+            Write 7-bit encoded UInt32
+            </summary>
+            <returns>number of bytes written</returns>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetBuffer.Read7BitEncodedUInt">
+            <summary>
+            Reads a UInt32 written using Write7BitEncodedUInt()
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetBuffer.WriteSignedSingle(System.Single,System.Int32)">
+            <summary>
+            Compress (lossy) a float in the range -1..1 using numberOfBits bits
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetBuffer.ReadSignedSingle(System.Int32)">
+            <summary>
+            Reads a float written using WriteSignedSingle()
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetBuffer.WriteUnitSingle(System.Single,System.Int32)">
+            <summary>
+            Compress (lossy) a float in the range 0..1 using numberOfBits bits
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetBuffer.ReadUnitSingle(System.Int32)">
+            <summary>
+            Reads a float written using WriteUnitSingle()
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetBuffer.WriteRangedSingle(System.Single,System.Single,System.Single,System.Int32)">
+            <summary>
+            Compress a float within a specified range using a certain number of bits
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetBuffer.ReadRangedSingle(System.Single,System.Single,System.Int32)">
+            <summary>
+            Reads a float written using WriteRangedSingle() using the same MIN and MAX values
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.XTEA.#ctor(System.Byte[],System.Int32)">
+            <summary>
+            16 byte key
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetUtil">
+            <summary>
+            Utility methods
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetUtil.Resolve(Lidgren.Library.Network.NetLog,System.String)">
+            <summary>
+            Get IP address from notation (xxx.xxx.xxx.xxx) or hostname
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetUtil.BitsToHoldUInt(System.UInt32)">
+            <summary>
+            returns how many bits are necessary to hold a certain number
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetLogEntry">
+            <summary>
+            An entry in the network log
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetLog">
+            <summary>
+            A class for capturing log feedback from the library
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetLog.OutputFileName">
+            <summary>
+            Specifies a filename to save log output to
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetLog.IsOutputToFileEnabled">
+            <summary>
+            Enables or disables log output to file
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.Checksum">
+            <summary>
+            CCITT-16
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetConnection">
+            <summary>
+            A network connection between two endpoints
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetConnection.Configuration">
+            <summary>
+            Configuration for this connection
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetConnection.Tag">
+            <summary>
+            Attached application data
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetConnection.Heartbeat(System.Double)">
+            <summary>
+            Connection heartbeat, normally called from NetClient.Heartbeat() or NetServer.Heartbeat()
+            Calling it manually may interfere with proper throttling
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetConnection.Disconnect(System.String)">
+            <summary>
+            Disconnects from remote host providing specified reason
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetConnection.DumpStatisticsToLog(Lidgren.Library.Network.NetLog)">
+            <summary>
+            Dump all statistics for this connection to the log specified
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetConnection.Status">
+            <summary>
+            Status for this connection
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetConnection.RemoteEndpoint">
+            <summary>
+            Remote endpoint of this connection
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetConnection.Parent">
+            <summary>
+            Gets which NetClient/NetServer holds this connection
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetConnection.RemoteClockOffset">
+            <summary>
+            Local + Offset = Remote
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetConnection.AverageRoundtripTime">
+            <summary>
+            Average roundtrip time to remote host
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetClient">
+             <summary>
+             A network client
+             </summary>
+             <example><code>
+             NetConfiguration config = new NetConfiguration("MyApp", 12345);
+             NetLog log = new NetLog();
+            
+             NetClient myNet = new NetClient(config, log);
+            
+             myNet.Connect("localhost", 12345);
+             </code></example>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetBase">
+            <summary>
+            Base class for NetClient and NetServer
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetBase.Configuration">
+            <summary>
+            Configuration for this client/server
+            </summary>
+        </member>
+        <member name="E:Lidgren.Library.Network.NetBase.StatusChanged">
+            <summary>
+            Event fired every time the status of any connection associated with this network changes
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.Heartbeat(System.Single)">
+            <summary>
+            Reads messages from network and sends unsent messages, resends etc
+            This method should be called as often as possible; maximum number
+            of seconds to spend can be specified
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.Heartbeat">
+            <summary>
+            Reads messages from network and sends unsent messages, resends etc
+            This method should be called as often as possible
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.ReadMessage">
+            <summary>
+            Reads a message, if available
+            </summary>
+            <returns>NetMessage, or null if none are available</returns>
+            <example><code>
+            bool keepGoing = true;
+            while (keepGoing)
+            {
+            	myClient.Heartbeat();
+            
+            	NetMessage msg;
+            	while ((msg = myNet.ReadMessage()) != null)
+            	{
+            		// handle msg
+            	}
+            }
+            </code></example>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.Disconnect(System.String)">
+            <summary>
+            Disconnects from the server, providing specified reason
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.DiscoverKnownServer(System.String,System.Int32)">
+            <summary>
+            Send server discovery request to a remote host, not necessarily on
+            the local network
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.Connect(System.Net.IPAddress,System.Int32)">
+            <summary>
+            Connects to a server
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.Connect(System.Net.IPEndPoint)">
+            <summary>
+            Connects to a server
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.Connect(System.String,System.Int32)">
+            <summary>
+            Connects to a server
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.Connect(System.String,System.Int32,System.Byte[])">
+            <summary>
+            Connects to a server
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.Connect(System.Net.IPAddress,System.Int32,System.Byte[])">
+            <summary>
+            Connects to a server
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.SendMessage(Lidgren.Library.Network.NetMessage,Lidgren.Library.Network.NetChannel)">
+            <summary>
+            Sends a message to the server using a specified channel
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.FlushMessages">
+            <summary>
+            Sends all unsent messages; may interfere with proper throttling
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetClient.Shutdown(System.String)">
+            <summary>
+            Sends disconnect to server and close the connection
+            </summary>
+        </member>
+        <member name="E:Lidgren.Library.Network.NetClient.ServerDiscovered">
+            <summary>
+            Event fired when server is found after using DiscoverLocal() to discover servers
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetClient.Status">
+            <summary>
+            Status of the server connection
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetClient.ServerConnection">
+            <summary>
+            The connection to the server; will be null until a call to Connect() has been made.
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetMessage">
+            <summary>
+            A network message
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.ResetReadPointer">
+            <summary>
+            Reset the read pointer of the message to the beginning
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.Write(System.UInt32,System.Int32)">
+            <summary>
+            Write an unsigned integer using 1 - 32 number of bits
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.Write(System.Int32,System.Int32)">
+            <summary>
+            Write an signed integer using 1 - 32 number of bits; using one of the bits as sign
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.Write(System.Byte,System.Int32)">
+            <summary>
+            Write a byte using 1 - 8 number of bits
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.WriteSignedSingle(System.Single,System.Int32)">
+            <summary>
+            Write a float in the range of -1 .. 1 using 1 - 32 bits
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.WriteUnitSingle(System.Single,System.Int32)">
+            <summary>
+            Write a float in the range of 0 .. 1 using 1 - 32 bits
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.WriteRangedSingle(System.Single,System.Single,System.Single,System.Int32)">
+            <summary>
+            Compress a float within a specified range using a certain number of bits
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.ReadRangedSingle(System.Single,System.Single,System.Int32)">
+            <summary>
+            Reads a float written using WriteRangedSingle() using the same MIN and MAX values
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.WriteNormal(System.Single,System.Single,System.Single,System.Int32)">
+            <summary>
+            Writes a unit vector using the supplied number of bits
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.Write7BitEncodedUInt(System.UInt32)">
+            <summary>
+            Write an unsigned integer using as few bytes as possible
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.ReadNormal(System.Int32,System.Single@,System.Single@,System.Single@)">
+            <summary>
+            Read a compressed unit vector
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.WriteSendStamp">
+            <summary>
+            Write the current time
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.WriteSendStamp(System.Double)">
+            <summary>
+            Write a timestamp IN THE PAST
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.PeekByte">
+            <summary>
+            Reads the next byte without incrementing the read pointer of the message
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.PeekByte(System.Int32)">
+            <summary>
+            Reads the next 1-8 bits without incrementing the read pointer of the message
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.PeekUInt32">
+            <summary>
+            Reads the next unsigned integer without incrementing the read pointer of the message
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.PeekUInt32(System.Int32)">
+            <summary>
+            Reads the next 1-32 bits without incrementing the read pointer of the message
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.PeekUInt16">
+            <summary>
+            Reads the next unsigned short without incrementing the read pointer of the message
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.PeekUInt16(System.Int32)">
+            <summary>
+            Reads the next unsigned short without incrementing the read pointer of the message
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.ReadSignedSingle(System.Int32)">
+            <summary>
+            Reads a float in the range -1 to 1 written using WriteSignedSingle()
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.ReadUnitSingle(System.Int32)">
+            <summary>
+            Reads a float in the range 0 to 1 written using WriteUnitSingle()
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.Read7BitEncodedUInt">
+            <summary>
+            Reads an unsigned integer written using Write7BitEncodedUInt
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.ReadSentStamp(Lidgren.Library.Network.NetConnection)">
+            <summary>
+            Reads a timestamp written using WriteSendStamp()
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.ToArray">
+            <summary>
+            Returns a copy of all bytes held in message payload
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetMessage.Sender">
+            <summary>
+            For received messages; this holds from which connection the message was sent
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.#ctor">
+            <summary>
+            Create a net message
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetMessage.#ctor(System.Int32)">
+            <summary>
+            Create a message with specified initial capacity in bytes
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetMessage.Length">
+            <summary>
+            Total length in bytes
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetMessage.SequenceChannel">
+            <summary>
+            NetChannel the message was sent over
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetMessage.SequenceNumber">
+            <summary>
+            Sequence number (within the channel) of the message
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetEncryption">
+            <summary>
+            Helper class for encryption
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetEncryption.GenerateRandomKeyPair(System.Byte[]@,System.Byte[]@)">
+            <summary>
+            Generate an RSA keypair, divided into public and private parts
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetEncryption.SetRSAKey(System.Byte[],System.Byte[])">
+            <summary>
+            for clients; pass null as privateKey
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetEncryption.EncryptRSA(System.Byte[])">
+            <summary>
+            Encrypt data using a public RSA key
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetEncryption.DecryptRSA(System.Byte[])">
+            <summary>
+            Decrypt data using the public and private RSA key
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetEncryption.EncryptSymmetric(Lidgren.Library.Network.NetBuffer)">
+            <summary>
+            Append a CRC checksum and encrypt data in place using XTEA
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetEncryption.DecryptSymmetric(Lidgren.Library.Network.NetBuffer)">
+            <summary> 
+            Decrypt using XTEA algo and verify CRC
+            </summary>
+            <returns>true for success, false for failure</returns>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetTime">
+            <summary>
+            Time service
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetTime.Encoded(System.Double)">
+            <summary>
+            Get encoded cyclic ushort from a certain timestamp
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetTime.FromEncoded(System.Single,System.Int32,System.UInt16,System.Int32@)">
+            <summary>
+            Returns absolute timestamp
+            Note; will only accept encoded timestamps IN THE PAST
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetTime.Now">
+            <summary>
+            Get number of seconds since the application started
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetTime.NowEncoded">
+            <summary>
+            Get current time encoded into a cyclic ushort
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetServer">
+            <summary>
+            A network server
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetServer.Connections">
+            <summary>
+            List of all connections to this server; may contain null entries and
+            entries may have status disconnected
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetServer.#ctor(Lidgren.Library.Network.NetAppConfiguration,Lidgren.Library.Network.NetLog)">
+            <summary>
+            Constructor for a server instance
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetServer.Heartbeat">
+            <summary>
+            Read messages from network and sends unsent messages, resends etc
+            This method should be called as often as possible
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetServer.ReadMessage">
+            <summary>
+            Reads a received message from any connection to the server
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetServer.SendMessage(Lidgren.Library.Network.NetMessage,Lidgren.Library.Network.NetConnection,Lidgren.Library.Network.NetChannel)">
+            <summary>
+            Sends a message to a certain connection using the channel specified
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetServer.SendMessage(Lidgren.Library.Network.NetMessage,System.Collections.Generic.IEnumerable{Lidgren.Library.Network.NetConnection},Lidgren.Library.Network.NetChannel)">
+            <summary>
+            Sends a message to several connections using the channel specified; should NOT be
+            used for messages which uses the string table read/write methods!
+            </summary>
+            <returns>number of messages sent</returns>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetServer.Broadcast(Lidgren.Library.Network.NetMessage,Lidgren.Library.Network.NetChannel,Lidgren.Library.Network.NetConnection)">
+            <summary>
+            Broadcasts a message to all connections except specified; should NOT be used for
+            messages which uses the string table read/write methods!
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetServer.Broadcast(Lidgren.Library.Network.NetMessage,Lidgren.Library.Network.NetChannel)">
+            <summary>
+            Broadcasts a message to all connections; should NOT be used for messages which
+            uses the string table read/write methods!
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetServer.FlushMessages">
+            <summary>
+            Sends all unsent messages for all connections; may interfere with proper throttling!
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetServer.Shutdown(System.String)">
+            <summary>
+            Sends disconnect to all connections and stops listening for new connections
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetServer.RemoveConnection(Lidgren.Library.Network.NetConnection)">
+            <summary>
+            Remove connection from Connections list(s)
+            </summary>
+        </member>
+        <member name="E:Lidgren.Library.Network.NetServer.ConnectionRequest">
+            <summary>
+            Event fired just before a client is connected; allows the application to reject unwanted connections
+            </summary>
+        </member>
+        <member name="P:Lidgren.Library.Network.NetServer.NumConnected">
+            <summary>
+            Gets the number of client that are connected (or connecting!)
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetStringTable.Write(Lidgren.Library.Network.NetMessage,System.String)">
+            <summary>
+            Returns encoded index
+            </summary>
+        </member>
+        <member name="M:Lidgren.Library.Network.NetStringTable.Rewrite(Lidgren.Library.Network.NetMessage,System.Int32,System.String)">
+            <summary>
+            Reuses the string table index
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetConnectionStatus">
+            <summary>
+            Status for a connection
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetOptimization">
+            <summary>
+            Specifies if a connection should emphasize response or bandwidth
+            </summary>
+        </member>
+        <member name="T:Lidgren.Library.Network.NetChannel">
+            <summary>
+            Specifies what guarantees a message send is given
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetChannel.Unreliable">
+            <summary>
+            Messages are not guaranteed to arrive
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetChannel.Sequenced1">
+            <summary>
+            Messages are not guaranteed to arrive, but out-of-order message, ie. late messages are dropped
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetChannel.ReliableUnordered">
+            <summary>
+            Messages are guaranteed to arrive, but not necessarily in the same order as sent
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetChannel.Ordered1">
+            <summary>
+            Messages are guaranteed to arrive, in the same order as they were sent
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetConnectRequestEventArgs.EndPoint">
+            <summary>
+            Remote endpoint of client wishing to connect
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetConnectRequestEventArgs.CustomData">
+            <summary>
+            Custom data sent by the client wishing to connect
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetConnectRequestEventArgs.MayConnect">
+            <summary>
+            Set this to false to disallow this connection
+            </summary>
+        </member>
+        <member name="F:Lidgren.Library.Network.NetConnectRequestEventArgs.DenialReason">
+            <summary>
+            Set this to a string if you want to supply a reason for denial
+            If no reason is set, no response will be sent and the connection attempt
+            silently dropped
+            </summary>
+        </member>
+    </members>
+</doc>
